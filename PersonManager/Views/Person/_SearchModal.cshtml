@@ -1,0 +1,33 @@
+﻿<dialog id="searchWindow">
+	<h2>Поиск людей</h2>
+
+	<form asp-action="Index" method="get">
+
+		<div class="search-field">
+			<label for="search">Имя</label>
+			<input type="text" id="search" name="search"/>
+		</div>
+
+		<div class="search-field">
+			<label for="ageFrom">Возраст от</label>
+			<input type="number" id="ageFrom" name="ageFrom"/>
+		</div>
+
+		<div class="search-field">
+			<label for="ageTo">Возраст до</label>
+			<input type="number" id="ageTo" name="ageTo"/>
+		</div>
+
+		<div>
+			<button type="submit" class="action-button edit-button">
+				Найти
+			</button>
+
+			
+
+			<button type="button" id="closeSearchButton" class="action-button edit-button">
+				Закрыть
+			</button>
+		</div>
+	</form>
+</dialog>

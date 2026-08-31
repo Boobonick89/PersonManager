@@ -1,0 +1,233 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* =========================
+   Модальное окно добавления
+   ========================= */
+
+#addWindow {
+    width: 350px;
+    padding: 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+    #addWindow h2 {
+        margin-top: 0;
+    }
+
+    #addWindow div {
+        margin-bottom: 15px;
+    }
+
+    #addWindow label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #addWindow input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    #addWindow .action-button {
+        margin-top: 10px;
+    }
+
+    #addWindow::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+
+/* =========================
+   Модальное окно редактирования
+   ========================= */
+
+#editWindow {
+    width: 350px;
+    padding: 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+    #editWindow h2 {
+        margin-top: 0;
+    }
+
+.edit-field {
+    margin-bottom: 15px;
+}
+
+    .edit-field label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .edit-field input {
+        width: 250px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+#editWindow .action-button {
+    margin-top: 5px;
+}
+
+#editWindow::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   Строка человека
+   ========================= */
+
+.person-row {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.person-name {
+    width: 160px;
+}
+
+.person-row form {
+    margin: 0;
+}
+
+
+/* =========================
+   Общие кнопки
+   ========================= */
+
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.person-row .action-button {
+    margin-left: 8px;
+}
+
+
+/* =========================
+   Кнопка добавления
+   ========================= */
+
+.add-button {
+    background-color: #0d6efd;
+    color: white;
+    margin-right: 8px;
+}
+
+    .add-button:hover {
+        background-color: #0b5ed7;
+    }
+
+
+/* =========================
+   Кнопка редактирования
+   ========================= */
+
+.edit-button {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+    .edit-button:hover {
+        background-color: #cfcfcf;
+    }
+
+
+/* =========================
+   Кнопка удаления
+   ========================= */
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+    .delete-button:hover {
+        background-color: #bb2d3b;
+    }
+
+#searchWindow {
+    width: 350px;
+    padding: 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+    #searchWindow h2 {
+        margin-top: 0;
+    }
+
+.search-field {
+    margin-bottom: 15px;
+}
+
+    .search-field label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .search-field input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+#searchWindow .action-button {
+    margin-top: 10px;
+}
+
+#searchWindow::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#searchButton {
+    margin-left: 10px;
+}

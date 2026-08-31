@@ -1,0 +1,28 @@
+﻿@model PersonManager.ViewModels.PersonViewModel
+
+<form asp-action="Create" method="post">
+	
+
+	<dialog id="addWindow">
+		<h2>Добавить человека</h2>
+		<div>
+			<label asp-for="NewPerson.Name">Имя</label>
+			<input asp-for="NewPerson.Name" />
+			<span asp-validation-for="NewPerson.Name"></span>
+		</div>
+
+		<div>
+			<label asp-for="NewPerson.Age">Возраст</label>
+			<input asp-for="NewPerson.Age" />
+			<span asp-validation-for="NewPerson.Age"></span>
+		</div>
+
+		<button type="submit" class="action-button add-button">
+			Добавить
+		</button>
+		<button type="button" id="closeButton" class="action-button edit-button">
+			Закрыть
+		</button>
+
+	</dialog>
+</form>

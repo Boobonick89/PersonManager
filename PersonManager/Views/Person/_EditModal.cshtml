@@ -1,0 +1,29 @@
+﻿@model PersonManager.ViewModels.PersonViewModel
+
+<dialog id="editWindow">
+	<h2>Редактирование человека</h2>
+	<form asp-action="Edit" method="post">
+		<input type="hidden" id="editId" name="id" />
+
+		<div class="edit-field">
+			<label for="editName">Имя</label>
+			<input type="text" id="editName" name="Name" />
+		</div>
+
+		<div class="edit-field">
+			<label for="editAge">Возраст</label>
+			<input type="number" id="editAge" name="Age" />
+		</div>
+			<div>
+				<button type="submit" class="action-button edit-button">
+					Сохранить
+				</button>
+
+				<button type="button" id="closeEditButton" class="action-button edit-button">
+					Закрыть
+				</button>
+
+			</div>
+			
+	</form>
+</dialog>

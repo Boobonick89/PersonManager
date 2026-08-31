@@ -1,0 +1,70 @@
+﻿@model PersonManager.ViewModels.PersonViewModel
+@using PersonManager.Models
+
+<h1>Список людей</h1>
+
+<button type="button" id="addButton" class="action-button add-button">
+	Добавить человека
+</button>
+
+<button type="button" id="searchButton" class="action-button edit-button ">
+	Поиск
+</button>
+
+@if(Model.IsSearch)
+{
+	<a asp-action="Index" class="action-button edit-button">
+		Показать всех
+	</a>
+}
+<partial name="_SearchModal"/>
+<partial name="_CreateModal" model="Model" />
+@if(!ViewData.ModelState.IsValid)
+{
+	<script>
+		document.getElementById("addWindow").showModal();
+		</script>
+
+}
+<partial name="_EditModal" model="Model"/>
+
+@{
+	int number = 1;
+}
+
+@foreach(Person person in Model.People)
+{
+	<div class="person-row">
+
+		<span class="person-number">
+			@number.
+		</span>
+
+		<span class="person-name">
+			@person.Name - @person.Age лет
+		</span>
+
+		<button type="button"
+			class="action-button edit-button edit-personbutton"
+		data-id="@person.Id"
+		data-name="@person.Name"
+		data-age="@person.Age">
+		Изменить
+		</button>
+
+	<form asp-action="Delete" method="post">
+		<input type="hidden" name="Id" value="@person.Id" />
+
+		<button type="submit" class="action-button delete-button"
+		onclick="return confirm('Удалить этого человека ?');">
+			Удалить
+		</button>
+	</form>
+	</div>
+
+	number++;
+}
+
+<script src="~/js/person.js"></script>
+
+
