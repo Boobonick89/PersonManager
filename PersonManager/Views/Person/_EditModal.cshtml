@@ -2,12 +2,23 @@
 
 <dialog id="editWindow">
 	<h2>Редактирование человека</h2>
+
 	<form asp-action="Edit" method="post">
 		<input type="hidden" id="editId" name="id" />
 
 		<div class="edit-field">
-			<label for="editName">Имя</label>
-			<input type="text" id="editName" name="Name" />
+			<label for="editLastName">Фамилия</label>
+			<input type="text" id="editLastName" name="LastName" required />
+		</div>
+
+		<div class="edit-field">
+			<label for="editFirstName">Имя</label>
+			<input type="text" id="editFirstName" name="FirstName" required />
+		</div>
+
+		<div class="edit-field">
+			<label for="editMiddleName">Отчество</label>
+			<input type="text" id="editMiddleName" name="MiddleName" />
 		</div>
 
 		<div class="edit-field">

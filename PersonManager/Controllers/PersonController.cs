@@ -29,7 +29,9 @@ namespace PersonManager.Controllers
 
 			if (!string.IsNullOrEmpty(search))
 			{
-				query = query.Where(p => EF.Functions.ILike(p.Name, $"%{search}%"));
+				query = query.Where(p => EF.Functions.ILike(p.LastName, $"%{search}%")||
+									EF.Functions.ILike(p.FirstName,$"%{search}%")||
+									EF.Functions.ILike(p.MiddleName,$"%{search}%"));
 			}
 
 			if (ageFrom.HasValue)
@@ -47,7 +49,10 @@ namespace PersonManager.Controllers
 			|| ageFrom.HasValue
 			|| ageTo.HasValue;
 
-			viewModel.People = query.OrderBy(p=>p.Name).ToList();
+			viewModel.People = query.OrderBy(p=>p.LastName)
+									.ThenBy(p=>p.FirstName)
+									.ThenBy(p=>p.MiddleName)
+									.ToList();
 
 			return View(viewModel);
 		}
@@ -96,7 +101,10 @@ namespace PersonManager.Controllers
 			if (oldPerson != null)
 
 			{
-				oldPerson.Name = person.Name;
+				oldPerson.LastName = person.LastName;
+				oldPerson.FirstName = person.FirstName;
+				oldPerson.MiddleName = person.MiddleName;
+
 				oldPerson.Age = person.Age;
 
 				_context.SaveChanges();

@@ -6,9 +6,21 @@
 	<dialog id="addWindow">
 		<h2>Добавить человека</h2>
 		<div>
-			<label asp-for="NewPerson.Name">Имя</label>
-			<input asp-for="NewPerson.Name" />
-			<span asp-validation-for="NewPerson.Name"></span>
+			<label asp-for="NewPerson.LastName">Имя</label>
+			<input asp-for="NewPerson.LastName" />
+			<span asp-validation-for="NewPerson.LastName" class="text-danger"></span>
+		</div>
+		
+		<div>
+			<label asp-for="NewPerson.FirstName">Фамилия</label>
+			<input asp-for="NewPerson.FirstName" />
+			<span asp-validation-for="NewPerson.FirstName" class="text-danger"></span>
+		</div>
+
+		<div>
+			<label asp-for="NewPerson.MiddleName">Отчество</label>
+			<input asp-for="NewPerson.MiddleName" />
+			<span asp-validation-for="NewPerson.MiddleName" class="text-danger"></span>
 		</div>
 
 		<div>

@@ -41,13 +41,20 @@
 		</span>
 
 		<span class="person-name">
-			@person.Name - @person.Age лет
+@person.LastName @person.FirstName @person.MiddleName - @person.Age @(person.Age % 10 == 1 && person.Age % 100 != 11
+	? "год"
+			: person.Age % 10 >= 2 && person.Age % 10 <= 4 &&
+			  (person.Age % 100 < 12 || person.Age % 100 > 14)
+				? "года"
+				: "лет")
 		</span>
 
 		<button type="button"
 			class="action-button edit-button edit-personbutton"
 		data-id="@person.Id"
-		data-name="@person.Name"
+		data-last-name="@person.LastName"
+		data-first-name="@person.FirstName"
+		data-middle-name="@person.MiddleName"
 		data-age="@person.Age">
 		Изменить
 		</button>
