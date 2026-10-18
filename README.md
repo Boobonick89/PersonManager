@@ -24,37 +24,57 @@ PersonManager
 
 C#
 
-ASP.NET Core MVC
+## Технологии
 
-Entity Framework Core
+- ASP.NET Core MVC
+- Entity Framework Core
+- PostgreSQL
+- Npgsql
+- LINQ
+- Razor Views
+- HTML, CSS, JavaScript
 
-PostgreSQL
+## Запуск проекта
 
-Npgsql
+### Требования
 
-LINQ
+- .NET 10 SDK
+- PostgreSQL
+- Visual Studio 2026 или другая совместимая среда разработки
 
-Razor Views
+### Инструкция
 
-HTML, CSS, JavaScript
+1. Клонировать репозиторий:
 
-Запуск проекта
+   ```bash
+   git clone https://github.com/Boobonick89/PersonManager.git
+   cd PersonManager
+   ```
 
-Установить .NET SDK и PostgreSQL.
+2. Настроить строку подключения к PostgreSQL в `appsettings.json`, указав параметры собственной базы данных. Не использовать чужие пароли и не публиковать свои учётные данные.
 
-Клонировать репозиторий:
+3. Восстановить NuGet-пакеты:
 
-git clone https://github.com/Boobonick89/PersonManager.git
+   ```bash
+   dotnet restore
+   ```
 
-Открыть решение в Visual Studio.
+4. Применить миграции Entity Framework Core:
 
-Настроить строку подключения к PostgreSQL в конфигурации приложения.
+   ```bash
+   dotnet ef database update
+   ```
 
-Восстановить NuGet-пакеты.
+   Для выполнения команды может потребоваться инструмент `dotnet-ef`.
 
-Применить миграции Entity Framework Core, если они предусмотрены проектом.
+5. Запустить приложение:
 
-Запустить приложение.
+   ```bash
+   dotnet run
+   ```
+
+6. Открыть адрес, указанный в консоли после запуска приложения.
+
 
 Статус
 
