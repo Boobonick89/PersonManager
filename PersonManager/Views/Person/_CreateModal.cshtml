@@ -6,13 +6,13 @@
 	<dialog id="addWindow">
 		<h2>Добавить человека</h2>
 		<div>
-			<label asp-for="NewPerson.LastName">Имя</label>
+			<label asp-for="NewPerson.LastName">Фамилия</label>
 			<input asp-for="NewPerson.LastName" />
 			<span asp-validation-for="NewPerson.LastName" class="text-danger"></span>
 		</div>
 		
 		<div>
-			<label asp-for="NewPerson.FirstName">Фамилия</label>
+			<label asp-for="NewPerson.FirstName">Имя</label>
 			<input asp-for="NewPerson.FirstName" />
 			<span asp-validation-for="NewPerson.FirstName" class="text-danger"></span>
 		</div>
