@@ -59,3 +59,15 @@ git clone https://github.com/Boobonick89/PersonManager.git
 Статус
 
 Учебный проект для практики разработки веб-приложений на C# и ASP.NET Core MVC.
+
+
+## Скриншоты приложения
+
+### Список людей
+![Список людей](screenshots/Git1.jpg)
+
+### Добавление человека
+![Добавление человека](screenshots/Git2.jpg)
+
+### Поиск и фильтрация
+![Поиск и фильтрация](screenshots/Git3.jpg)
